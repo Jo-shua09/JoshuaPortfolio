@@ -1,7 +1,8 @@
 import Noise from "../components/animations/Noise";
 import Footer from "../components/common/Footer";
 import Navigation from "../components/common/Navigation";
-import { Outlet } from "react-router-dom";
+import Index from "../pages";
+import Portfolio from "../pages/Portfolio";
 
 export default function AppLayout() {
   return (
@@ -14,9 +15,8 @@ export default function AppLayout() {
       {/* Content layer */}
       <div className="relative z-10 section-page">
         <Navigation />
-        <main>
-          <Outlet />
-        </main>
+        <Index />
+        <Portfolio />
         <Footer />
       </div>
     </div>
