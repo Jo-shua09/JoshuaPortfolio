@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.2s ease-in-out all;
+  text-transform: capitalize;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0ad7;
+  width: 0.7%;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0a0a0a;
+  border-radius: 8px;
+  border: 1px solid #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0a0a0a;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  font-size: 66.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.section {
+  padding: 5rem 0;
+}
+.section-page {
+  padding: 0 3rem;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55.5%;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 51.5%;
+  }
+  .section-page {
+    padding: 0 2rem;
+  }
+}
