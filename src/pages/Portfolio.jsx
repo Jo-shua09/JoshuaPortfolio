@@ -1,4 +1,5 @@
 import FuzzyText from "../components/animations/FuzzyText";
+import ProjectCard from "../components/sections/ProjectCard";
 
 export default function Portfolio() {
   return (
@@ -9,9 +10,10 @@ export default function Portfolio() {
             Featured Projects
           </FuzzyText>
         </div>
-        {/* <p className="text-3xl font-medium normal-case text-neutral-300">Showcasing my expertise through practical applications.</p> */}
       </div>
-      <div className="w-full"></div>
+      <div className="w-full">
+        <ProjectCard />
+      </div>
     </div>
   );
 }
