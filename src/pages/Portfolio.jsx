@@ -5,8 +5,8 @@ export default function Portfolio() {
   return (
     <div className="w-full mt-20 section">
       <div className="space-y-4 text-left">
-        <div className="inline-block m-auto border rounded-full border-neutral-800">
-          <FuzzyText baseIntensity={0.15} hoverIntensity={1} enableHover={true} fontSize="32px">
+        <div className="inline- justify-center flex md:m-0 m-auto border rounded-full w-fit !-z-10 border-neutral-800 backdrop-blur-sm bg-neutral-900/30">
+          <FuzzyText baseIntensity={0.15} hoverIntensity={1} enableHover={true} fontSize="clamp(2rem, 10vw, 3.5rem)">
             Featured Projects
           </FuzzyText>
         </div>

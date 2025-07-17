@@ -1,8 +1,19 @@
 import { BiDownload } from "react-icons/bi";
 import StarBorder from "../animations/StarBorder";
 import logo from "../../assets/images/logo.png";
+import { VscAccount, VscArchive, VscHome } from "react-icons/vsc";
+import Dock from "./../animations/Dock";
+import { MdContactPhone } from "react-icons/md";
+import { FiHome } from "react-icons/fi";
 
 export default function Navigation() {
+  const items = [
+    { icon: <FiHome size={28} />, label: "Home", onClick: () => alert("Home!") },
+    { icon: <VscArchive size={28} />, label: "portfolio", onClick: () => alert("Archive!") },
+    { icon: <VscAccount size={28} />, label: "about", onClick: () => alert("Profile!") },
+    { icon: <MdContactPhone size={28} />, label: "contact", onClick: () => alert("Settings!") },
+  ];
+
   return (
     <header className="w-full py-12">
       <div className="md:max-w-[100rem] max-w-6xl p-10 w-full rounded-2xl border border-neutral-500/30 m-auto backdrop-blur-sm bg-neutral-900/30">
@@ -35,6 +46,9 @@ export default function Navigation() {
             </StarBorder>
           </div>
         </nav>
+      </div>
+      <div className="!z-[9999] hidden">
+        <Dock items={items} panelHeight={68} baseItemSize={55} magnification={80} className="" />
       </div>
     </header>
   );

@@ -7,8 +7,9 @@ const FuzzyText = ({
   fontFamily = "inherit",
   color = "#fff",
   enableHover = true,
-  baseIntensity = 0.18,
-  hoverIntensity = 0.5,
+  baseIntensity = 0.15,
+  hoverIntensity = 1,
+  className = "",
 }) => {
   const canvasRef = useRef(null);
 
@@ -31,6 +32,7 @@ const FuzzyText = ({
 
       const fontSizeStr = typeof fontSize === "number" ? `${fontSize}px` : fontSize;
       let numericFontSize;
+
       if (typeof fontSize === "number") {
         numericFontSize = fontSize;
       } else {
@@ -160,7 +162,11 @@ const FuzzyText = ({
     };
   }, [children, fontSize, fontWeight, fontFamily, color, enableHover, baseIntensity, hoverIntensity]);
 
-  return <canvas ref={canvasRef} />;
+  return (
+    <div className={className}>
+      <canvas ref={canvasRef} style={{ display: "block" }} />
+    </div>
+  );
 };
 
 export default FuzzyText;
