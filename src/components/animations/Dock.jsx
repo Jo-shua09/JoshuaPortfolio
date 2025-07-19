@@ -98,7 +98,7 @@ export default function Dock({
   const height = useSpring(heightRow, spring);
 
   return (
-    <motion.div style={{ height }} className="fixed bottom-0 left-0 right-0 flex items-center justify-center w-full pointer-events-none">
+    <motion.div style={{ height }} className="fixed z-[999999] bottom-0 left-0 right-0 flex items-center justify-center w-full pointer-events-none">
       <motion.div
         onMouseMove={({ clientX }) => {
           isHovered.set(1);

@@ -1,18 +1,18 @@
 import { BiDownload } from "react-icons/bi";
 import logo from "../../assets/images/logo.png";
-import { VscAccount, VscArchive } from "react-icons/vsc";
 import Dock from "./../animations/Dock";
-import { MdContactPhone } from "react-icons/md";
-import { FiHome } from "react-icons/fi";
+import { FiHome, FiMail } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import Button from "../ui/Button";
+import { LuLayoutDashboard } from "react-icons/lu";
+import { CgProfile } from "react-icons/cg";
 
 export default function Navigation() {
   const items = [
-    { icon: <FiHome size={28} />, label: "Home", onClick: () => alert("Home!") },
-    { icon: <VscArchive size={28} />, label: "portfolio", onClick: () => alert("Archive!") },
-    { icon: <VscAccount size={28} />, label: "about", onClick: () => alert("Profile!") },
-    { icon: <MdContactPhone size={28} />, label: "contact", onClick: () => alert("Settings!") },
+    { icon: <FiHome size={28} />, label: "Home", onClick: () => (window.location.hash = "#") },
+    { icon: <LuLayoutDashboard size={28} />, label: "Portfolio", onClick: () => (window.location.hash = "#projects") },
+    { icon: <CgProfile size={28} />, label: "About", onClick: () => (window.location.hash = "#about") },
+    { icon: <FiMail size={28} />, label: "Contact", onClick: () => (window.location.hash = "#contact") },
   ];
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -43,10 +43,13 @@ export default function Navigation() {
                 <a href="#" className="text-3xl font-medium text-neutral-500 hover:text-white">
                   Home
                 </a>
-                <a href="#" className="text-3xl font-medium text-neutral-500 hover:text-white">
+                <a href="#projects" className="text-3xl font-medium text-neutral-500 hover:text-white">
+                  projects
+                </a>
+                <a href="#about" className="text-3xl font-medium text-neutral-500 hover:text-white">
                   About
                 </a>
-                <a href="#" className="text-3xl font-medium text-neutral-500 hover:text-white">
+                <a href="#contact" className="text-3xl font-medium text-neutral-500 hover:text-white">
                   Contact
                 </a>
               </>
@@ -55,7 +58,7 @@ export default function Navigation() {
           </div>
         </nav>
       </div>
-      <div className="!z-[9999] hidden">
+      <div className="!z-[9999] md:hidden block">
         <Dock items={items} panelHeight={68} baseItemSize={55} magnification={80} className="" />
       </div>
     </header>
