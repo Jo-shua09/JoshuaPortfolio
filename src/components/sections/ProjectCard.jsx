@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { BsDisplay } from "react-icons/bs";
 import StarBorder from "../animations/StarBorder";
 import Button from "../ui/Button";
-import { BiDownload } from "react-icons/bi";
 
 export default function ProjectCard({ project }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1020);
@@ -28,8 +27,8 @@ export default function ProjectCard({ project }) {
           </div>
 
           <div className="w-full space-y-8 lg:space-y-5 lg:flex-[5] p-10">
-            <h2 className="text-5xl font-bold text-white normal-case font-monospace">{project.title}</h2>
-            <p className="text-3xl font-medium normal-case text-neutral-300">{project.overview}</p>
+            <h2 className="md:text-5xl text-4xl font-bold text-white normal-case font-monospace">{project.title}</h2>
+            <p className="md:text-3xl text-[1.7rem] font-medium normal-case text-neutral-300">{project.overview}</p>
             {/* <ul className="space-y-4">
               {project.features.map((feature, index) => (
                 <li key={index} className="text-[1.7rem] text-neutral-300 normal-case list-disc ml-20">
@@ -39,16 +38,16 @@ export default function ProjectCard({ project }) {
             </ul> */}
             <div className="flex items-center gap-8 !my-6">
               {project.stacks.map((stack, index) => (
-                <img key={index} src={stack} alt="technology image" className="w-20 h-20 object-contain" />
+                <img key={index} src={stack} alt="technology image" className="w-16 h-16 object-contain" />
               ))}
             </div>
             <div className="flex items-center gap-12 !mt-16">
               {project.live && (
                 <a href={project.live}>
-                  <Button href={project.live} children="view live" icon={<BiDownload />} title="visit live site" aria="click to view live" />
+                  <Button href={project.live} children="view live" title="visit live site" aria="click to view live" />
                 </a>
               )}
-              <Button href={project.github} children="view github" icon={<BiDownload />} title="visit github" aria="click to check gitbuh code" />
+              <Button href={project.github} children="view github" title="visit github" aria="click to check gitbuh code" />
             </div>
           </div>
         </div>
@@ -62,8 +61,8 @@ export default function ProjectCard({ project }) {
         {project.id % 2 === 0 ? (
           <>
             <div className="w-full space-y-8 lg:space-y-5 lg:flex-[5]">
-              <h2 className="text-5xl font-bold text-white normal-case font-monospace">{project.title}</h2>
-              <p className="text-3xl font-medium normal-case text-neutral-300">{project.overview}</p>
+              <h2 className="md:text-5xl text-4xl font-bold text-white normal-case font-monospace">{project.title}</h2>
+              <p className="md:text-3xl text-[1.7rem] font-medium normal-case text-neutral-300">{project.overview}</p>
               {/* <ul className="space-y-4">
                 {project.features.map((feature, index) => (
                   <li key={index} className="text-[1.7rem] text-neutral-300 normal-case list-disc ml-20">
@@ -73,16 +72,16 @@ export default function ProjectCard({ project }) {
               </ul> */}
               <div className="flex items-center gap-8 !my-6">
                 {project.stacks.map((stack, index) => (
-                  <img key={index} src={stack} alt="technology image" className="w-20 h-20 object-contain" />
+                  <img key={index} src={stack} alt="technology image" className="w-16 h-16 object-contain" />
                 ))}
               </div>
               <div className="flex items-center gap-12 !mt-16">
                 {project.live && (
                   <a href={project.live}>
-                    <Button href={project.live} children="view live" icon={<BiDownload />} title="visit live site" aria="click to view live" />
+                    <Button href={project.live} children="view live" title="visit live site" aria="click to view live" />
                   </a>
                 )}
-                <Button href={project.github} children="view github" icon={<BiDownload />} title="visit github" aria="click to check gitbuh code" />
+                <Button href={project.github} children="view github" title="visit github" aria="click to check gitbuh code" />
               </div>
             </div>
 
@@ -99,8 +98,8 @@ export default function ProjectCard({ project }) {
             </div>
 
             <div className="w-full space-y-8 lg:space-y-5 lg:flex-[5]">
-              <h2 className="text-5xl font-bold text-white normal-case font-monospace">{project.title}</h2>
-              <p className="text-3xl font-medium normal-case text-neutral-300">{project.overview}</p>
+              <h2 className="md:text-5xl text-4xl font-bold text-white normal-case font-monospace">{project.title}</h2>
+              <p className="md:text-3xl text-[1.7rem] font-medium normal-case text-neutral-300">{project.overview}</p>
               {/* <ul className="space-y-4">
                 {project.features.map((feature, index) => (
                   <li key={index} className="text-[1.7rem] text-neutral-300 normal-case list-disc ml-20">
@@ -110,16 +109,16 @@ export default function ProjectCard({ project }) {
               </ul> */}
               <div className="flex items-center gap-16 !my-6">
                 {project.stacks.map((stack, index) => (
-                  <img key={index} src={stack} alt="technology image" className="w-20 h-20 object-contain" />
+                  <img key={index} src={stack} alt="technology image" className="w-16 h-16 object-contain" />
                 ))}
               </div>
               <div className="flex items-center gap-12 !mt-16">
                 {project.live && (
                   <a href={project.live}>
-                    <Button href={project.live} children="view live" icon={<BiDownload />} title="visit live site" aria="click to view live" />
+                    <Button href={project.live} children="view live" title="visit live site" aria="click to view live" />
                   </a>
                 )}
-                <Button href={project.github} children="view github" icon={<BiDownload />} title="visit github" aria="click to check gitbuh code" />
+                <Button href={project.github} children="view github" title="visit github" aria="click to check gitbuh code" />
               </div>
             </div>
           </>
