@@ -9,8 +9,8 @@ export default function Hero() {
           <img src={me} loading="lazy" alt="me image" className="w-[10rem] h-[10rem] brightness-50 rounded-full " />
         </div>
         <h1 className="text-4xl font-bold text-white normal-case md:text-5xl font-monospace">Hello i'm Joshua Onyeka, a</h1>
-        <p className="md:text-[8rem] text-nowrap text-7xl leading-tight font-semibold normal-case my-5 text-neutral-200">Software Developer</p>
-        <p className="text-3xl font-medium normal-case text-neutral-200 max-w-4xl m-auto md:leading-relaxed leading-loose md:max-w-[110rem]">
+        <p className="md:text-[8rem] text-nowrap text-6xl leading-tight font-semibold normal-case my-5 text-neutral-200">Software Developer</p>
+        <p className="md:text-3xl text-[1.7rem] font-medium normal-case text-neutral-200 max-w-4xl m-auto md:leading-relaxed leading-loose md:max-w-[110rem]">
           I’m a software developer specializing in web applications, crafting responsive and high-performance solutions with React.js, Next.js, and
           TypeScript. I focus on clean code, scalable architecture, and intuitive user experiences that deliver real results. Passionate about modern
           web development, I build efficient, maintainable software while continuously learning and adapting to new technologies.
