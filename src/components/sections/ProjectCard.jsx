@@ -47,7 +47,7 @@ export default function ProjectCard({ project }) {
                   <Button href={project.live} children="view live" title="visit live site" aria="click to view live" />
                 </a>
               )}
-              <Button href={project.github} children="view github" title="visit github" aria="click to check gitbuh code" />
+              <Button href={project.github} children="view code" title="view code" aria="click to check github code" />
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function ProjectCard({ project }) {
                     <Button href={project.live} children="view live" title="visit live site" aria="click to view live" />
                   </a>
                 )}
-                <Button href={project.github} children="view github" title="visit github" aria="click to check gitbuh code" />
+                <Button href={project.github} children="view code" title="view code" aria="click to check github code" />
               </div>
             </div>
 
@@ -118,7 +118,7 @@ export default function ProjectCard({ project }) {
                     <Button href={project.live} children="view live" title="visit live site" aria="click to view live" />
                   </a>
                 )}
-                <Button href={project.github} children="view github" title="visit github" aria="click to check gitbuh code" />
+                <Button href={project.github} children="view code" title="view code" aria="click to check github code" />
               </div>
             </div>
           </>
