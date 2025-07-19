@@ -4,17 +4,17 @@ export default {
   theme: {
     extend: {
       animation: {
-        "star-movement-bottom": "star-movement-bottom linear infinite alternate",
-        "star-movement-top": "star-movement-top linear infinite alternate",
+        "star-movement-bottom": "starMoveBottom linear infinite",
+        "star-movement-top": "starMoveTop linear infinite",
       },
       keyframes: {
-        "star-movement-bottom": {
-          "0%": { transform: "translate(0%, 0%)", opacity: "1" },
-          "100%": { transform: "translate(-100%, 0%)", opacity: "0" },
+        starMoveBottom: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" },
         },
-        "star-movement-top": {
-          "0%": { transform: "translate(0%, 0%)", opacity: "1" },
-          "100%": { transform: "translate(100%, 0%)", opacity: "0" },
+        starMoveTop: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
       fontFamily: {

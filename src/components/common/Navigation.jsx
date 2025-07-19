@@ -1,10 +1,11 @@
 import { BiDownload } from "react-icons/bi";
-import StarBorder from "../animations/StarBorder";
 import logo from "../../assets/images/logo.png";
-import { VscAccount, VscArchive, VscHome } from "react-icons/vsc";
+import { VscAccount, VscArchive } from "react-icons/vsc";
 import Dock from "./../animations/Dock";
 import { MdContactPhone } from "react-icons/md";
 import { FiHome } from "react-icons/fi";
+import { useEffect, useState } from "react";
+import Button from "../ui/Button";
 
 export default function Navigation() {
   const items = [
@@ -13,6 +14,19 @@ export default function Navigation() {
     { icon: <VscAccount size={28} />, label: "about", onClick: () => alert("Profile!") },
     { icon: <MdContactPhone size={28} />, label: "contact", onClick: () => alert("Settings!") },
   ];
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <header className="w-full py-12">
@@ -24,26 +38,20 @@ export default function Navigation() {
           </div>
 
           <div className="flex items-center gap-10">
-            <a href="#" className="text-3xl font-medium text-neutral-500 hover:text-white">
-              Home
-            </a>
-            <a href="#" className="text-3xl font-medium text-neutral-500 hover:text-white">
-              About
-            </a>
-            <a href="#" className="text-3xl font-medium text-neutral-500 hover:text-white">
-              Contact
-            </a>
-
-            <StarBorder
-              as="button"
-              className="custom-class hover:scale-95"
-              color="gray"
-              speed="5s"
-              aria-label="Download resume"
-              title="Download PDF resume"
-            >
-              resume <BiDownload />
-            </StarBorder>
+            {!isMobile && (
+              <>
+                <a href="#" className="text-3xl font-medium text-neutral-500 hover:text-white">
+                  Home
+                </a>
+                <a href="#" className="text-3xl font-medium text-neutral-500 hover:text-white">
+                  About
+                </a>
+                <a href="#" className="text-3xl font-medium text-neutral-500 hover:text-white">
+                  Contact
+                </a>
+              </>
+            )}
+            <Button href="" children="resume" icon={<BiDownload />} title="Download PDF resume" aria="Download resume" />
           </div>
         </nav>
       </div>

@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="m-auto !my-20 w-fit h-fit">
           <img src={me} loading="lazy" alt="me image" className="w-[10rem] h-[10rem] brightness-50 rounded-full " />
         </div>
-        <h1 className="text-4xl font-bold text-white normal-case md:text-5xl font-monospace">Hello i'm Joshua Onyeka,</h1>
+        <h1 className="text-4xl font-bold text-white normal-case md:text-5xl font-monospace">Hello i'm Joshua Onyeka, a</h1>
         <p className="md:text-[8rem] text-nowrap text-7xl leading-tight font-semibold normal-case my-5 text-neutral-200">Software Developer</p>
         <p className="text-3xl font-medium normal-case text-neutral-200 max-w-4xl m-auto md:leading-relaxed leading-loose md:max-w-[110rem]">
           I’m a software developer specializing in web applications, crafting responsive and high-performance solutions with React.js, Next.js, and
