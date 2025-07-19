@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import { BsDisplay } from "react-icons/bs";
-import StarBorder from "../animations/StarBorder";
 import Button from "../ui/Button";
 
 export default function ProjectCard({ project }) {
@@ -42,11 +40,7 @@ export default function ProjectCard({ project }) {
               ))}
             </div>
             <div className="flex items-center gap-12 !mt-16">
-              {project.live && (
-                <a href={project.live}>
-                  <Button href={project.live} children="view live" title="visit live site" aria="click to view live" />
-                </a>
-              )}
+              {project.live && <Button href={project.live} children="view live" title="visit live site" aria="click to view live" />}
               <Button href={project.github} children="view code" title="view code" aria="click to check github code" />
             </div>
           </div>
@@ -76,11 +70,7 @@ export default function ProjectCard({ project }) {
                 ))}
               </div>
               <div className="flex items-center gap-12 !mt-16">
-                {project.live && (
-                  <a href={project.live}>
-                    <Button href={project.live} children="view live" title="visit live site" aria="click to view live" />
-                  </a>
-                )}
+                {project.live && <Button href={project.live} children="view live" title="visit live site" aria="click to view live" />}
                 <Button href={project.github} children="view code" title="view code" aria="click to check github code" />
               </div>
             </div>
@@ -113,11 +103,7 @@ export default function ProjectCard({ project }) {
                 ))}
               </div>
               <div className="flex items-center gap-12 !mt-16">
-                {project.live && (
-                  <a href={project.live}>
-                    <Button href={project.live} children="view live" title="visit live site" aria="click to view live" />
-                  </a>
-                )}
+                {project.live && <Button href={project.live} children="view live" title="visit live site" aria="click to view live" />}
                 <Button href={project.github} children="view code" title="view code" aria="click to check github code" />
               </div>
             </div>

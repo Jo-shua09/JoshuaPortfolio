@@ -13,7 +13,7 @@ export default function Navigation() {
     if (element) {
       setTimeout(() => {
         element.scrollIntoView({ behavior: "smooth" });
-      }, 300); // 1s delay
+      }, 300);
     }
   };
 
