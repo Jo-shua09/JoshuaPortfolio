@@ -8,11 +8,20 @@ import { LuLayoutDashboard } from "react-icons/lu";
 import { CgProfile } from "react-icons/cg";
 
 export default function Navigation() {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+      }, 300); // 1s delay
+    }
+  };
+
   const items = [
-    { icon: <FiHome size={28} />, label: "Home", onClick: () => (window.location.hash = "#") },
-    { icon: <LuLayoutDashboard size={28} />, label: "Portfolio", onClick: () => (window.location.hash = "#projects") },
-    { icon: <CgProfile size={28} />, label: "About", onClick: () => (window.location.hash = "#about") },
-    { icon: <FiMail size={28} />, label: "Contact", onClick: () => (window.location.hash = "#contact") },
+    { icon: <FiHome size={28} />, label: "Home", onClick: () => scrollToSection("home") },
+    { icon: <LuLayoutDashboard size={28} />, label: "Portfolio", onClick: () => scrollToSection("projects") },
+    { icon: <CgProfile size={28} />, label: "About", onClick: () => scrollToSection("about") },
+    { icon: <FiMail size={28} />, label: "Contact", onClick: () => scrollToSection("contact") },
   ];
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);

@@ -3,7 +3,7 @@ import me from "../../assets/images/me.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col overflow-hidden items-center justify-center w-full min-h-[70vh]">
+    <section id="home" className="relative flex flex-col overflow-hidden items-center justify-center w-full min-h-[70vh]">
       <div className="relative z-10 p-8 px-10 text-center section">
         <div className="m-auto !my-20 w-fit h-fit">
           <img src={me} loading="lazy" alt="me image" className="w-[10rem] h-[10rem] brightness-50 rounded-full " />
