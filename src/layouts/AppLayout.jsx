@@ -2,6 +2,7 @@ import Noise from "../components/animations/Noise";
 import Footer from "../components/common/Footer";
 import Navigation from "../components/common/Navigation";
 import About from "../pages/About";
+import Contact from "../pages/Contact";
 import Index from "../pages/Index";
 import Portfolio from "../pages/Portfolio";
 
@@ -19,6 +20,7 @@ export default function AppLayout() {
         <Index />
         <Portfolio />
         <About />
+        <Contact />
         <Footer />
       </div>
     </div>

@@ -38,8 +38,8 @@ export default function Navigation() {
   }, []);
 
   return (
-    <header className="w-full py-12">
-      <div className="md:max-w-[100rem] max-w-6xl p-10 w-full rounded-2xl border border-neutral-500/30 m-auto backdrop-blur-sm bg-neutral-900/30">
+    <header className="w-full py-12 h-fit">
+      <div className="md:max-w-[100rem] max-w-6xl fixed top-8 left-0 right-0 z-[9999] h-fit p-10 w-full rounded-2xl border border-neutral-500/30 m-auto backdrop-blur-3xl bg-neutral-900/95">
         {/* Add your navigation content here */}
         <nav className="flex items-center justify-between">
           <div className="w-full h-full">
