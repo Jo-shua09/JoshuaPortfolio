@@ -1,7 +1,7 @@
 import Noise from "../components/animations/Noise";
 import Footer from "../components/common/Footer";
 import Navigation from "../components/common/Navigation";
-import Skills from "../components/sections/Skills";
+import About from "../pages/About";
 import Index from "../pages/Index";
 import Portfolio from "../pages/Portfolio";
 
@@ -18,7 +18,7 @@ export default function AppLayout() {
         <Navigation />
         <Index />
         <Portfolio />
-        <Skills />
+        <About />
         <Footer />
       </div>
     </div>

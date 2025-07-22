@@ -49,7 +49,7 @@ body {
   padding: 5rem 0;
 }
 .section-page {
-  padding: 0 3rem;
+  padding: 0 4rem;
 }
 
 @media (max-width: 991px) {
@@ -63,6 +63,6 @@ body {
     font-size: 51.5%;
   }
   .section-page {
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
 }
