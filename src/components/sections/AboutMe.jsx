@@ -1,8 +1,11 @@
 import FuzzyText from "../animations/FuzzyText";
 import ProfileCard from "../animations/ProfileCard/ProfileCard";
 import myImage from "../../assets/images/avatar.png";
+import { useState } from "react";
 
 export default function AboutMe() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <div className="w-full flex items-center gap-20 sm:flex-nowrap flex-wrap">
       <div className="space-y-4 text-left">
@@ -11,7 +14,14 @@ export default function AboutMe() {
             About Me
           </FuzzyText>
         </div>
-        <article className="text-3xl leading-relaxed font-semibold sm:font-medium italic md:font-serif normal-case text-center text-neutral-300 !mt-20">
+        {/* Text Container */}
+        <article
+          className={`text-neutral-300 italic text-[1.7rem] md:text-3xl leading-relaxed sm:leading-loose !mt-16 text-center font-medium sm:font-semibold md:font-serif ${
+            !isExpanded ? "line-clamp-3 sm:line-clamp-4 lg:line-clamp-none" : ""
+          }
+          transition-all duration-300
+        `}
+        >
           Welcome to my portfolio! I'm a software developer specializing in web applications, passionately creating engaging digital experiences that
           seamlessly blend functionality and aesthetics. With expertise in building responsive and high-performance solutions, particularly with
           React.js, Next.js, and TypeScript, I focus on delivering clean code, scalable architecture, and intuitive user experiences that consistently
@@ -19,8 +29,18 @@ export default function AboutMe() {
           optimized flawlessly across all devices and browsers. My commitment to modern web development means I'm continuously learning and adapting
           to emerging technologies, guaranteeing that every project I undertake is efficient and impactful. Collaboration and clear communication are
           fundamental to my approach, as I guide clients seamlessly from initial concept through to successful launch. Explore my portfolio to see how
-          I bring innovative ideas to life. Let’s connect and work together to turn your vision into a compelling digital reality!
+          I bring innovative ideas to life. Let's connect and work together to turn your vision into a compelling digital reality!
         </article>
+
+        {/* Read More/Read Less Button */}
+        <div className="flex justify-center mt-4 lg:hidden">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-neutral-100 hover:text-neutral-300 text-4xl font-medium transition-colors"
+          >
+            {isExpanded ? "Read less..." : "Read more..."}
+          </button>
+        </div>
       </div>
 
       <div className="m-auto w-fit flex justify-center md:mt-0 mt-16">
