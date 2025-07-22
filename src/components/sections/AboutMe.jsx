@@ -33,7 +33,7 @@ export default function AboutMe() {
           avatarUrl={myImage}
           showUserInfo={true}
           enableTilt={true}
-          onContactClick={() => console.log("Contact clicked")}
+          onContactClick={() => alert("Contact clicked")}
         />
       </div>
     </div>

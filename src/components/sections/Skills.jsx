@@ -32,7 +32,7 @@ export default function Skills() {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-x-16 gap-y-20 !mt-16">
           <div className="rounded-xl p-10 w-full shadow-2xl m-auto bg-neutral-900">
             <h2 className="text-5xl font-semibold mb-20 text-white font-monospace">tech stack</h2>
-            <div className="grid grid-cols-3 gap-14">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-14">
               <div className="space-x-5 flex items-center">
                 <img src={html} alt="html logo" className="w-20 h-20 object-contain" />
                 <h3 className="text-[1.7rem] font-semibold text-neutral-300">Html</h3>
@@ -74,7 +74,7 @@ export default function Skills() {
 
           <div className="rounded-xl p-10 max-w-7xl shadow-2xl bg-neutral-900">
             <h2 className="text-5xl font-semibold mb-20 text-white font-monospace">other tools and technologies</h2>
-            <div className="grid grid-cols-3 gap-14">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-14">
               <div className="space-x-5 flex items-center">
                 <img src={git} alt="git logo" className="w-20 h-20 object-contain" />
                 <h3 className="text-[1.7rem] font-semibold text-neutral-300">git</h3>
