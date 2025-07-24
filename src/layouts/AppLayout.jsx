@@ -5,6 +5,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Index from "../pages/Index";
 import Portfolio from "../pages/Portfolio";
+import { motion } from "framer-motion";
 
 export default function AppLayout() {
   return (
@@ -15,14 +16,20 @@ export default function AppLayout() {
       </div>
 
       {/* Content layer */}
-      <div className="relative z-10 section-page">
+      <motion.div
+        className="relative z-10 section-page"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 1 }}
+        transition={{ duration: 1.3 }}
+      >
         <Navigation />
         <Index />
         <Portfolio />
         <About />
         <Contact />
         <Footer />
-      </div>
+      </motion.div>
     </div>
   );
 }
