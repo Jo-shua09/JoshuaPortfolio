@@ -28,8 +28,8 @@ export default function AppLayout() {
         <Portfolio />
         <About />
         <Contact />
-        <Footer />
       </motion.div>
+      {/* <Footer /> */}
     </div>
   );
 }

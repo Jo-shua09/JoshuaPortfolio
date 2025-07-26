@@ -40,7 +40,6 @@ export default function Navigation() {
   return (
     <header className="w-full py-12 h-fit">
       <div className="md:max-w-[100rem] max-w-6xl w-[85%] fixed top-8 left-0 right-0 z-[9999] h-fit p-10 md:w-full rounded-2xl border border-neutral-500/30 m-auto backdrop-blur-3xl bg-neutral-900/95">
-        {/* Add your navigation content here */}
         <nav className="flex items-center justify-between">
           <div className="w-full h-full">
             <img src={logo} loading="lazy" alt="logo image" className="object-contain w-[5rem] h-fit" />
@@ -68,7 +67,7 @@ export default function Navigation() {
         </nav>
       </div>
       <div className="!z-[9999] md:hidden block">
-        <Dock items={items} panelHeight={68} baseItemSize={55} magnification={80} className="" />
+        <Dock items={items} panelHeight={68} baseItemSize={55} magnification={80} />
       </div>
     </header>
   );
