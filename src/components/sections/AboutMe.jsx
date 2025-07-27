@@ -47,13 +47,13 @@ export default function AboutMe() {
         <ProfileCard
           name="Joshua Onyeka"
           title="Software Developer"
-          handle="Joshua"
+          handle="Jo_shua"
           status="Online"
           contactText="Contact Me"
           avatarUrl={myImage}
           showUserInfo={true}
           enableTilt={true}
-          onContactClick={() => alert("Contact clicked")}
+          onContactClick={() => window.open("https://calendly.com/jo_shua/", "_blank")}
         />
       </div>
     </div>

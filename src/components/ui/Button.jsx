@@ -1,6 +1,7 @@
-const Button = ({ href = "#", children, icon, title, aria, className }) => {
+const Button = ({ href = "#", onClick, children, icon, title, aria, className }) => {
   return (
     <a
+      onClick={onClick}
       href={href}
       title={title}
       aria-label={aria}

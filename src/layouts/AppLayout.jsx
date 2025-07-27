@@ -1,26 +1,33 @@
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import Noise from "../components/animations/Noise";
-import Footer from "../components/common/Footer";
+// import Footer from "../components/common/Footer";
 import Navigation from "../components/common/Navigation";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Index from "../pages/Index";
 import Portfolio from "../pages/Portfolio";
 import { motion } from "framer-motion";
+import Loader from "../components/animations/Loader";
 
 export default function AppLayout() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div className="relative m-auto w-full max-w-[185rem]">
       {/* Background layer */}
-      <div className="fixed inset-0 w-full h-full overflow-hidden bg-neutral-950 -z-10">
+      <div className="overflow-hidden fixed inset-0 w-full h-full bg-neutral-950 -z-10">
         <Noise patternSize={250} patternScaleX={1} patternScaleY={1} patternRefreshInterval={2} patternAlpha={15} />
       </div>
+
+      {/* Loader */}
+      <AnimatePresence mode="wait">{isLoading && <Loader onLoadingComplete={() => setIsLoading(false)} />}</AnimatePresence>
 
       {/* Content layer */}
       <motion.div
         className="relative z-10 section-page"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 1 }}
+        animate={{ opacity: isLoading ? 0 : 1 }}
         transition={{ duration: 1.3 }}
       >
         <Navigation />
