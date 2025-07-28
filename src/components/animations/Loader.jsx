@@ -7,7 +7,7 @@ export default function Loader({ onLoadingComplete }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       if (progress < 100) {
-        setProgress(prev => Math.min(prev + Math.random() * 15, 100));
+        setProgress((prev) => Math.min(prev + Math.random() * 15, 100));
       } else {
         onLoadingComplete?.();
       }
@@ -18,8 +18,8 @@ export default function Loader({ onLoadingComplete }) {
 
   return (
     <motion.div
-      initial={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ translateY: 100% }}
+      exit={{ translateY: 0% }}
       transition={{ duration: 1, ease: "easeInOut" }}
       className="fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-neutral-950"
     >
@@ -37,7 +37,7 @@ export default function Loader({ onLoadingComplete }) {
               borderColor: { duration: 3, repeat: Infinity },
             }}
           />
-          
+
           {/* Inner pulsing circle */}
           <motion.div
             className="absolute inset-0 m-8 bg-neutral-900 rounded-full"
@@ -65,11 +65,7 @@ export default function Loader({ onLoadingComplete }) {
         </div>
 
         {/* Loading text */}
-        <motion.div
-          className="mt-8 text-2xl text-neutral-400"
-          animate={{ opacity: [0.5, 1, 0.5] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
+        <motion.div className="mt-8 text-2xl text-neutral-400" animate={{ opacity: [0.5, 1, 0.5] }} transition={{ duration: 2, repeat: Infinity }}>
           Loading...
         </motion.div>
       </div>

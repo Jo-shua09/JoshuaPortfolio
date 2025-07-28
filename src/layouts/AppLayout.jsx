@@ -21,22 +21,18 @@ export default function AppLayout() {
       </div>
 
       {/* Loader */}
-      <AnimatePresence mode="wait">{isLoading && <Loader onLoadingComplete={() => setIsLoading(false)} />}</AnimatePresence>
 
-      {/* Content layer */}
-      <motion.div
-        className="relative z-10 section-page"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isLoading ? 0 : 1 }}
-        transition={{ duration: 1.3 }}
-      >
-        <Navigation />
-        <Index />
-        <Portfolio />
-        <About />
-        <Contact />
-      </motion.div>
-      {/* <Footer /> */}
+      {!isLoading && (
+        // Content layer
+        <motion.div className="relative z-10 section-page" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.3 }}>
+          <Navigation />
+          <Index />
+          <Portfolio />
+          <About />
+          <Contact />
+        </motion.div>
+      )}
+      <AnimatePresence mode="wait">{isLoading && <Loader onLoadingComplete={() => setIsLoading(false)} />}</AnimatePresence>
     </div>
   );
 }
