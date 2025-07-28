@@ -78,6 +78,23 @@ body {
   }
 }
 
+/* Ensure the header doesn't affect document flow */
+body {
+  padding-top: 80px; /* Adjust this value based on your final navbar height */
+}
+
+/* Make buttons more compact */
+button,
+.button {
+  padding: 0.5rem 1rem !important;
+}
+
+/* Safari specific height fixes */
+@supports (-webkit-touch-callout: none) {
+  header {
+    height: 60px; /* Fixed height for Safari */
+  }
+}
 @media (max-width: 991px) {
   html {
     font-size: 51.5%;

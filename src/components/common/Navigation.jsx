@@ -42,7 +42,7 @@ export default function Navigation() {
       <div className="md:max-w-[100rem] max-w-6xl !h-fit w-[85%] fixed top-8 left-0 right-0 z-[9999] p-10 md:w-full rounded-2xl border border-neutral-500/30 m-auto backdrop-blur-3xl bg-neutral-900/95">
         <nav className="flex items-center justify-between">
           <div className="w-full h-full">
-            <img src={logo} loading="lazy" alt="logo image" className="object-contain w-[5rem] h-fit" />
+            <img src={logo} loading="lazy" alt="logo image" className="object-contain md:w-24 w-20 h-fit" />
           </div>
 
           <div className="flex items-center gap-10">
@@ -62,7 +62,7 @@ export default function Navigation() {
                 </a>
               </>
             )}
-            <ButtonTwo children="resume" icon={<BiDownload />} title="Download PDF resume" aria="Download resume" />
+            <ButtonTwo children="resume" icon={<BiDownload size={20} />} title="Download PDF resume" aria="Download resume" />
           </div>
         </nav>
       </div>
