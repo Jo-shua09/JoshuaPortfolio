@@ -3,7 +3,7 @@ import logo from "../../assets/images/logo.png";
 import Dock from "./../animations/Dock";
 import { FiHome, FiMail } from "react-icons/fi";
 import { useEffect, useState } from "react";
-import Button from "../ui/Button";
+import Button, { ButtonTwo } from "../ui/Button";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { CgProfile } from "react-icons/cg";
 
@@ -39,7 +39,7 @@ export default function Navigation() {
 
   return (
     <header className="w-full py-12 h-fit">
-      <div className="md:max-w-[100rem] max-w-6xl w-[85%] fixed top-8 left-0 right-0 z-[9999] h-fit p-10 md:w-full rounded-2xl border border-neutral-500/30 m-auto backdrop-blur-3xl bg-neutral-900/95">
+      <div className="md:max-w-[100rem] max-w-6xl h-fit w-[85%] fixed top-8 left-0 right-0 z-[9999] h-fit p-10 md:w-full rounded-2xl border border-neutral-500/30 m-auto backdrop-blur-3xl bg-neutral-900/95">
         <nav className="flex items-center justify-between">
           <div className="w-full h-full">
             <img src={logo} loading="lazy" alt="logo image" className="object-contain w-[5rem] h-fit" />
@@ -62,7 +62,7 @@ export default function Navigation() {
                 </a>
               </>
             )}
-            <Button href="" children="resume" icon={<BiDownload />} title="Download PDF resume" aria="Download resume" />
+            <ButtonTwo href="" children="resume" icon={<BiDownload />} title="Download PDF resume" aria="Download resume" />
           </div>
         </nav>
       </div>

@@ -4,6 +4,7 @@ const Button = ({ href = "#", onClick, children, icon, title, aria, className })
       onClick={onClick}
       href={href}
       title={title}
+      preventDefault={onClick ? true : true}
       aria-label={aria}
       className={` relative flex rounded-2xl hover:scale-95 text-center font-bold text-2xl text-nowrap items-center tracking-widest px-8 py-5 border border-neutral-800 shadow-sm text-white bg-transparent overflow-hidden z-10 group ${className} `}
     >
