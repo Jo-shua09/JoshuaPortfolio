@@ -7,13 +7,21 @@ import { MdMailOutline } from "react-icons/md";
 export default function ContactForm() {
   return (
     <div className="w-full md:mb-0 mb-52">
-      <p className="max-w-6xl pt-6 text-3xl font-medium normal-case text-neutral-300">
+      <p 
+        data-aos="fade-up"
+        data-aos-delay="300"
+        className="max-w-6xl pt-6 text-3xl font-medium normal-case text-neutral-300"
+      >
         Ready to start your next project? Let's collaborate and create something amazing together. I'm always excited to work on new challenges and
         innovative ideas.
       </p>
       <div className="flex flex-wrap-reverse items-center justify-between w-full gap-12 mt-20 md:flex-nowrap">
         <div className="w-full md:flex-[2]">
-          <div className="w-full p-20 text-center shadow-xl rounded-2xl space-y-7 bg-neutral-900">
+          <div 
+            data-aos="fade-right"
+            data-aos-delay="400"
+            className="w-full p-20 text-center shadow-xl rounded-2xl space-y-7 bg-neutral-900"
+          >
             <h3 className="text-5xl font-bold text-white normal-case font-monospace">Ready to Start a Project?</h3>
             <p className="text-3xl font-medium normal-case text-neutral-200">
               I'm currently available for freelance opportunities and exciting new projects. Let's discuss how we can bring your ideas to life.
@@ -30,46 +38,54 @@ export default function ContactForm() {
             </Button>
           </div>
 
-          <div className="mt-20 space-y-10 ">
-            <div className="w-full max-w-2xl p-10 m-auto shadow-xl rounded-2xl bg-neutral-900">
+          <div className="mt-20 space-y-10">
+            <div 
+              data-aos="fade-up"
+              data-aos-delay="500"
+              className="w-full max-w-2xl p-10 m-auto shadow-xl rounded-2xl bg-neutral-900"
+            >
               <h3 className="text-4xl font-bold text-center text-white normal-case font-monospace">My social accounts</h3>
               <div className="flex items-center justify-center gap-20 mt-20">
                 <div className="flex items-center justify-center">
                   <div className="flex justify-between w-full gap-12 place-content-center">
-                    <div className="flex flex-col items-center justify-center gap-2">
-                      <a href="https://x.com/jo_shua_9" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 group">
-                        <FaXTwitter className="text-5xl text-neutral-400 hover:text-[#000000] dark:hover:text-[#ffffff] cursor-pointer transition-transform duration-300 hover:scale-110" />
-                        <span className="sr-only">X (Twitter) profile</span>
-                      </a>
-                      <p className="text-2xl font-medium text-white font-monospace">Twitter</p>
-                    </div>
-
-                    <div className="flex flex-col items-center justify-center gap-2">
-                      <a
-                        href="https://linkedin.com/in/joshua-onyeka"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="transition-all duration-300 group"
+                    {[
+                      {
+                        icon: <FaXTwitter className="text-5xl text-neutral-400 hover:text-[#000000] dark:hover:text-[#ffffff] cursor-pointer transition-transform duration-300 hover:scale-110" />,
+                        name: "Twitter",
+                        href: "https://x.com/jo_shua_9"
+                      },
+                      {
+                        icon: <FaLinkedin className="text-5xl text-neutral-400 hover:text-[#0A66C2] cursor-pointer transition-transform duration-300 hover:scale-110" />,
+                        name: "linkedin",
+                        href: "https://linkedin.com/in/joshua-onyeka"
+                      },
+                      {
+                        icon: <FaGithub className="text-5xl text-neutral-400 hover:text-[#181717] dark:hover:text-[#ffffff] cursor-pointer transition-transform duration-300 hover:scale-110" />,
+                        name: "github",
+                        href: "https://github.com/jo-shua09"
+                      }
+                    ].map((social, index) => (
+                      <div 
+                        key={social.name}
+                        data-aos="fade-up"
+                        data-aos-delay={600 + (index * 100)}
+                        className="flex flex-col items-center justify-center gap-2"
                       >
-                        <FaLinkedin className="text-5xl text-neutral-400 hover:text-[#0A66C2] cursor-pointer transition-transform duration-300 hover:scale-110" />
-                        <span className="sr-only">LinkedIn profile</span>
-                      </a>
-                      <p className="text-2xl font-medium text-white font-monospace">linkedin</p>
-                    </div>
-
-                    <div className="flex flex-col items-center justify-center gap-2">
-                      <a href="https://github.com/jo-shua09" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 group">
-                        <FaGithub className="text-5xl text-neutral-400 hover:text-[#181717] dark:hover:text-[#ffffff] cursor-pointer transition-transform duration-300 hover:scale-110" />
-                        <span className="sr-only">GitHub profile</span>
-                      </a>
-                      <p className="text-2xl font-medium text-white font-monospace">github</p>
-                    </div>
+                        <a href={social.href} target="_blank" rel="noopener noreferrer" className="transition-all duration-300 group">
+                          {social.icon}
+                          <span className="sr-only">{social.name} profile</span>
+                        </a>
+                        <p className="text-2xl font-medium text-white font-monospace">{social.name}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
 
             <div
+              data-aos="fade-up"
+              data-aos-delay="900"
               onClick={() => (window.location.href = "mailto:joshuaonyeka2020@gmail.com")}
               className="w-full max-w-2xl p-10 m-auto shadow-xl cursor-pointer rounded-2xl hover:scale-95 bg-neutral-900"
             >
@@ -92,49 +108,55 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <form className="w-full md:flex-[2]">
+        <form 
+          data-aos="fade-left"
+          data-aos-delay="400"
+          className="w-full md:flex-[2]"
+        >
           <div className="w-full p-10 shadow-xl rounded-2xl bg-neutral-900">
             <h3 className="text-5xl font-bold text-white normal-case font-monospace">Send a message</h3>
             <div className="mt-16 space-y-10">
-              <div className="space-y-2">
-                <label className="text-neutral-200 font-medium text-[1.7rem]">full name</label>
-                <input
-                  type="text"
-                  placeholder="Enter full name"
-                  required
-                  className="text-[1.7rem] placeholder:text-2xl font-medium text-white border border-neutral-700 rounded-2xl normal-case pl-4 w-full h-[5.5rem] focus:border-white bg-transparent"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-neutral-200 font-medium text-[1.7rem]">Email</label>
-                <input
-                  type="email"
-                  placeholder="Enter email address"
-                  required
-                  className="text-[1.7rem] placeholder:text-2xl font-medium text-white border border-neutral-700 rounded-2xl normal-case pl-4 w-full h-[5.5rem] focus:border-white bg-transparent"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-neutral-200 font-medium text-[1.7rem]">subject</label>
-                <input
-                  type="text"
-                  placeholder="Enter subject of mail"
-                  required
-                  className="text-[1.7rem] placeholder:text-2xl font-medium text-white border border-neutral-700 rounded-2xl normal-case pl-4 w-full h-[5.5rem] focus:border-white bg-transparent"
-                />
-              </div>
-              <div className="space-y-2">
+              {[
+                { label: "full name", type: "text", placeholder: "Enter full name" },
+                { label: "Email", type: "email", placeholder: "Enter email address" },
+                { label: "subject", type: "text", placeholder: "Enter subject of mail" }
+              ].map((field, index) => (
+                <div 
+                  key={field.label}
+                  data-aos="fade-left"
+                  data-aos-delay={500 + (index * 100)}
+                  className="space-y-2"
+                >
+                  <label className="text-neutral-200 font-medium text-[1.7rem]">{field.label}</label>
+                  <input
+                    type={field.type}
+                    placeholder={field.placeholder}
+                    required
+                    className="text-[1.7rem] placeholder:text-2xl font-medium text-white border border-neutral-700 rounded-2xl normal-case pl-4 w-full h-[5.5rem] focus:border-white bg-transparent"
+                  />
+                </div>
+              ))}
+              
+              <div 
+                data-aos="fade-left"
+                data-aos-delay="800"
+                className="space-y-2"
+              >
                 <label className="text-neutral-200 font-medium text-[1.7rem]">message</label>
                 <textarea
-                  type="text"
                   placeholder="Enter your message"
                   required
                   className="text-[1.7rem] placeholder:text-2xl font-medium text-white border border-neutral-700 rounded-2xl normal-case p-4 w-full h-[15rem] focus:border-white bg-transparent"
                 />
               </div>
-              <div className="w-full">
+              
+              <div 
+                data-aos="fade-up"
+                data-aos-delay="900"
+                className="w-full"
+              >
                 <Button
-                  className="w-full h-[5.5rem] flex justify-center items-center "
+                  className="w-full h-[5.5rem] flex justify-center items-center"
                   icon={<FaTelegramPlane className="text-3xl" />}
                   children="send message"
                 />

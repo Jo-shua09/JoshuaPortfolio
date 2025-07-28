@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import Noise from "../components/animations/Noise";
-// import Footer from "../components/common/Footer";
 import Navigation from "../components/common/Navigation";
 import About from "../pages/About";
 import Contact from "../pages/Contact";

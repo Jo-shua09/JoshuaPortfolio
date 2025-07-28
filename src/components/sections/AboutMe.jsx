@@ -9,13 +9,18 @@ export default function AboutMe() {
   return (
     <div className="w-full flex items-center gap-20 sm:flex-nowrap flex-wrap">
       <div className="space-y-4 text-left">
-        <div className="inline- justify-center md:mr-0 mr-5 py-3 flex md:m-0 m-auto border rounded-full w-fit !-z-10 border-neutral-800 backdrop-blur-sm bg-neutral-900/30">
+        <div 
+          data-aos="fade-down"
+          className="inline- justify-center md:mr-0 mr-5 py-3 flex md:m-0 m-auto border rounded-full w-fit !-z-10 border-neutral-800 backdrop-blur-sm bg-neutral-900/30"
+        >
           <FuzzyText baseIntensity={0.1} hoverIntensity={1} enableHover={true} fontSize="clamp(2rem, 10vw, 3.5rem)">
             About Me
           </FuzzyText>
         </div>
-        {/* Text Container */}
+
         <article
+          data-aos="fade-up"
+          data-aos-delay="300"
           className={`text-neutral-300 italic text-[1.7rem] md:text-3xl leading-relaxed sm:leading-loose !mt-16 text-center font-medium sm:font-semibold md:font-serif ${
             !isExpanded ? "line-clamp-3 sm:line-clamp-4 lg:line-clamp-none" : ""
           }
@@ -32,8 +37,11 @@ export default function AboutMe() {
           I bring innovative ideas to life. Let's connect and work together to turn your vision into a compelling digital reality!
         </article>
 
-        {/* Read More/Read Less Button */}
-        <div className="flex justify-center mt-4 lg:hidden">
+        <div 
+          data-aos="fade-up"
+          data-aos-delay="400"
+          className="flex justify-center mt-4 lg:hidden"
+        >
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="text-neutral-100 hover:text-neutral-300 text-4xl font-medium transition-colors"
@@ -43,7 +51,11 @@ export default function AboutMe() {
         </div>
       </div>
 
-      <div className="m-auto w-fit flex justify-center md:mt-0 mt-16">
+      <div 
+        data-aos="fade-left"
+        data-aos-delay="200"
+        className="m-auto w-fit flex justify-center md:mt-0 mt-16"
+      >
         <ProfileCard
           name="Joshua Onyeka"
           title="Software Developer"
