@@ -39,8 +39,8 @@ export default function Navigation() {
 
   return (
     <>
-      <header className="w-full pt-10 md:!h-fit overflow-hidden !h-[100px] fixed top-0 left-0 right-0 z-[9999]">
-        <div className="md:max-w-[100rem] max-w-6xl w-[85%] md:!h-fit !h-[11rem] p-10 md:w-full rounded-2xl border border-neutral-500/30 m-auto backdrop-blur-3xl">
+      <header className="w-full pt-10 md:!h-fit overflow-hidden !h-[100px] fixed top-0 left-0 right-0">
+        <div className="md:max-w-[100rem] max-w-6xl w-[85%] md:!h-fit !h-[11rem] z-[9999] p-10 md:w-full rounded-2xl border border-neutral-500/30 m-auto backdrop-blur-3xl">
           <nav className="flex items-center justify-between">
             <div className="w-full h-full">
               <img src={logo} loading="lazy" alt="logo image" className="object-contain w-20 md:w-24 h-fit" />
