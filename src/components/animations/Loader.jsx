@@ -18,8 +18,8 @@ export default function Loader({ onLoadingComplete }) {
 
   return (
     <motion.div
-      initial={{ translateY: 100% }}
-      exit={{ translateY: 0% }}
+      initial={{ opacity: 1 }}
+      exit={{ translateY: "100%" }}
       transition={{ duration: 1, ease: "easeInOut" }}
       className="fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-neutral-950"
     >
