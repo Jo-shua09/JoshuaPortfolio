@@ -111,9 +111,8 @@ export default function ContactForm() {
               Schedule a Call
             </p>
             <Button
-              onClick={() => window.open("https://calendly.com/jo_shua/", "_blank")}
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={() => window.open("https://calendly.com/jo_shua/")}
+              target="no_blank"
               icon={<BiPhone className="text-4xl" />}
               className="flex items-center justify-center w-fit h-[5.5rem] m-auto border-2 normal-case !mt-20"
             >
