@@ -24,10 +24,7 @@ export default function AppLayout() {
       {!isLoading && (
         // Content layer
         <motion.div className="relative z-10 section-page" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.3 }}>
-          <div className="w-full border border-green-700 !h-fit">
-            <Navigation />
-          </div>
-
+          <Navigation />
           <Index />
           <Portfolio />
           <About />
