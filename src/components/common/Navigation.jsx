@@ -38,37 +38,43 @@ export default function Navigation() {
   }, []);
 
   return (
-    <header className="w-full py-12 !h-fit">
-      <div className="md:max-w-[100rem] max-w-6xl w-[85%] fixed top-8 left-0 right-0 z-[9999] p-10 md:w-full rounded-2xl md:border border-neutral-500/30 m-auto backdrop-blur-3xl">
-        <nav className="flex items-center justify-between">
-          <div className="w-full h-full">
-            <img src={logo} loading="lazy" alt="logo image" className="object-contain w-20 md:w-24 h-fit" />
-          </div>
+    <>
+      <header className="w-full pt-10 !h-[100px] fixed top-0 left-0 right-0 z-[9999]">
+        <div className="md:max-w-[100rem] max-w-6xl w-[85%] p-10 md:w-full rounded-2xl border border-neutral-500/30 m-auto backdrop-blur-3xl">
+          <nav className="flex items-center justify-between">
+            <div className="w-full h-full">
+              <img src={logo} loading="lazy" alt="logo image" className="object-contain w-20 md:w-24 h-fit" />
+            </div>
 
-          <div className="flex items-center gap-10">
-            {!isMobile && (
-              <>
-                <a href="#" className="text-3xl font-medium text-neutral-300 hover:font-semibold hover:text-white">
-                  Home
-                </a>
-                <a href="#projects" className="text-3xl font-medium text-neutral-300 hover:font-semibold hover:text-white">
-                  projects
-                </a>
-                <a href="#about" className="text-3xl font-medium text-neutral-300 hover:font-semibold hover:text-white">
-                  About
-                </a>
-                <a href="#contact" className="text-3xl font-medium text-neutral-300 hover:font-semibold hover:text-white">
-                  Contact
-                </a>
-              </>
-            )}
-            <ButtonTwo children="resume" icon={<BiDownload size={20} />} title="Download PDF resume" aria="Download resume" />
-          </div>
-        </nav>
-      </div>
+            <div className="flex items-center gap-10">
+              {!isMobile && (
+                <>
+                  <a href="#" className="text-3xl font-medium text-neutral-300 hover:font-semibold hover:text-white">
+                    Home
+                  </a>
+                  <a href="#projects" className="text-3xl font-medium text-neutral-300 hover:font-semibold hover:text-white">
+                    projects
+                  </a>
+                  <a href="#about" className="text-3xl font-medium text-neutral-300 hover:font-semibold hover:text-white">
+                    About
+                  </a>
+                  <a href="#contact" className="text-3xl font-medium text-neutral-300 hover:font-semibold hover:text-white">
+                    Contact
+                  </a>
+                </>
+              )}
+              <ButtonTwo children="resume" icon={<BiDownload size={20} />} title="Download PDF resume" aria="Download resume" />
+            </div>
+          </nav>
+        </div>
+        <div className="!z-[9999] md:hidden block">
+          <Dock items={items} panelHeight={68} baseItemSize={55} magnification={80} />
+        </div>
+      </header>
+
       <div className="!z-[9999] md:hidden block">
         <Dock items={items} panelHeight={68} baseItemSize={55} magnification={80} />
       </div>
-    </header>
+    </>
   );
 }
