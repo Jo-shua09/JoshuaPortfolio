@@ -39,14 +39,14 @@ export default function Navigation() {
 
   return (
     <>
-      <header className="w-full pt-10 md:!h-fit overflow-hidden !h-[100px] fixed top-0 left-0 right-0">
-        <div className="md:max-w-[100rem] max-w-6xl w-[85%] md:!h-fit !h-[11rem] z-[9999] p-10 md:w-full rounded-2xl border border-neutral-500/30 m-auto backdrop-blur-3xl">
+      <header className="w-full pt-8 pb-16 md:!h-fit overflow-hidden !h-[100px] fixed top-0 left-0 right-0 z-[9999]">
+        <div className="md:max-w-[100rem] max-w-6xl w-[85%] md:!h-fit z-10 !h-[11rem] p-10 md:w-full rounded-2xl border border-neutral-500/30 m-auto backdrop-blur-3xl">
           <nav className="flex items-center justify-between">
-            <div className="w-full h-full">
+            <div className="w-full h-full border">
               <img src={logo} loading="lazy" alt="logo image" className="object-contain w-20 md:w-24 h-fit" />
             </div>
 
-            <div className="flex items-center justify-end w-full gap-10">
+            <div className="flex items-center justify-end w-full gap-10 border">
               {!isMobile && (
                 <>
                   <a href="#" className="text-3xl font-medium text-neutral-300 hover:font-semibold hover:text-white">
