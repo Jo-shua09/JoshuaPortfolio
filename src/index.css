@@ -92,7 +92,7 @@ button,
 /* Safari specific height fixes */
 @supports (-webkit-touch-callout: none) {
   header {
-    height: 60px !important; /* Fixed height for Safari */
+    /* height: 60px !important;  */
   }
 }
 @media (max-width: 991px) {
