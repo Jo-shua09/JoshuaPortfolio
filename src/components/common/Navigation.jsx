@@ -39,7 +39,7 @@ export default function Navigation() {
 
   return (
     <>
-      <header className="w-full pt-10 !h-[100px] fixed top-0 left-0 right-0 z-[9999]">
+      <header className="w-full pt-10 !h-[100px] fixed top-0 border border-red-600 left-0 right-0 z-[9999]">
         <div className="md:max-w-[100rem] max-w-6xl w-[85%] p-10 md:w-full rounded-2xl border border-neutral-500/30 m-auto backdrop-blur-3xl">
           <nav className="flex items-center justify-between">
             <div className="w-full h-full">

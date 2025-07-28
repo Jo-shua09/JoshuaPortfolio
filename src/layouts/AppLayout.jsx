@@ -15,7 +15,7 @@ export default function AppLayout() {
   return (
     <div className="relative m-auto w-full max-w-[185rem] overflow-hidden">
       {/* Background layer */}
-      <div className="overflow-hidden fixed inset-0 w-full h-full bg-neutral-950 -z-10">
+      <div className="fixed inset-0 w-full h-full overflow-hidden bg-neutral-950 -z-10">
         <Noise patternSize={250} patternScaleX={1} patternScaleY={1} patternRefreshInterval={2} patternAlpha={15} />
       </div>
 
@@ -24,7 +24,7 @@ export default function AppLayout() {
       {!isLoading && (
         // Content layer
         <motion.div className="relative z-10 section-page" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.3 }}>
-          <div className="w-full !h-fit">
+          <div className="w-full border border-green-700 !h-fit">
             <Navigation />
           </div>
 
