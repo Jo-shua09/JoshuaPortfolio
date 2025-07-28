@@ -13,7 +13,7 @@ export default function AppLayout() {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="relative m-auto w-full max-w-[185rem]">
+    <div className="relative m-auto w-full max-w-[185rem] overflow-hidden">
       {/* Background layer */}
       <div className="overflow-hidden fixed inset-0 w-full h-full bg-neutral-950 -z-10">
         <Noise patternSize={250} patternScaleX={1} patternScaleY={1} patternRefreshInterval={2} patternAlpha={15} />
