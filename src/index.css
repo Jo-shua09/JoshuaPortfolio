@@ -52,6 +52,26 @@ body {
   padding: 0 4rem;
 }
 
+@supports (-webkit-touch-callout: none) {
+  /* Safari-specific styles */
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55.5%;
