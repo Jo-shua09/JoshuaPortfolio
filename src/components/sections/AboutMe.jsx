@@ -1,7 +1,8 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import FuzzyText from "../animations/FuzzyText";
 import ProfileCard from "../animations/ProfileCard/ProfileCard";
 import myImage from "../../assets/images/avatar.png";
-import { useState } from "react";
 import { ButtonTwo } from "../ui/Button";
 import { BiDownload } from "react-icons/bi";
 
@@ -10,48 +11,67 @@ export default function AboutMe() {
 
   return (
     <div className="flex flex-wrap items-center w-full gap-20 sm:flex-nowrap">
-      <div className="space-y-4 text-left">
-        <div
-          data-aos="fade-down"
-          className="inline- justify-center md:mr-0 mr-5 py-3 flex md:m-0 m-auto border rounded-full w-fit !-z-10 border-neutral-800 backdrop-blur-sm bg-neutral-900/30"
+      {/* Left Section */}
+      <div className="flex-1 space-y-4 text-left">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="inline-flex justify-center py-3 border rounded-full w-fit border-neutral-800 backdrop-blur-sm bg-neutral-900/30"
         >
           <FuzzyText baseIntensity={0.1} hoverIntensity={1} enableHover={true} fontSize="clamp(2rem, 10vw, 3.5rem)">
             About Me
           </FuzzyText>
-        </div>
+        </motion.div>
 
-        <article
-          data-aos="fade-up"
-          data-aos-delay="300"
-          className={`text-neutral-300 italic text-[1.7rem] md:text-3xl leading-relaxed sm:leading-loose !mt-16 text-center font-medium sm:font-semibold md:font-serif ${
-            !isExpanded ? "line-clamp-3 sm:line-clamp-4 lg:line-clamp-none" : ""
-          }
-          transition-all duration-300
-        `}
+        {/* Description */}
+        <motion.article
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+          className={`text-neutral-300 italic text-[1.5rem] md:text-[1.7rem] leading-relaxed sm:leading-loose !mt-12 text-center font-medium sm:font-semibold transition-all duration-500`}
         >
-          Welcome to my portfolio! I'm a software developer specializing in web applications, passionately creating engaging digital experiences that
-          seamlessly blend functionality and aesthetics. With expertise in building responsive and high-performance solutions, particularly with
-          React.js, Next.js, and TypeScript, I focus on delivering clean code, scalable architecture, and intuitive user experiences that consistently
-          drive real results. I prioritize captivating audiences through meticulous UI/UX design, ensuring every website is user-friendly and
-          optimized flawlessly across all devices and browsers. My commitment to modern web development means I'm continuously learning and adapting
-          to emerging technologies, guaranteeing that every project I undertake is efficient and impactful. Collaboration and clear communication are
-          fundamental to my approach, as I guide clients seamlessly from initial concept through to successful launch. Explore my portfolio to see how
-          I bring innovative ideas to life. Let's connect and work together to turn your vision into a compelling digital reality!
-        </article>
+          <AnimatePresence>
+            <motion.p
+              key={isExpanded ? "expanded" : "collapsed"}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.6 }}
+              className={!isExpanded ? "line-clamp-4 !normal-case" : "!normal-case"}
+            >
+              Welcome to my portfolio! I'm a software developer specializing in web applications, passionately creating engaging digital experiences
+              that seamlessly blend functionality and aesthetics. With expertise in building responsive and high-performance solutions, particularly
+              with React.js, Next.js, and TypeScript, I focus on delivering clean code, scalable architecture, and intuitive user experiences that
+              consistently drive real results. Collaboration and clear communication are fundamental to my approach, as I guide clients seamlessly
+              from concept to launch. Let’s connect and turn your vision into a compelling digital reality!
+            </motion.p>
+          </AnimatePresence>
+        </motion.article>
 
-        <div data-aos="fade-up" data-aos-delay="400" className="flex justify-center mt-4 lg:hidden">
+        {/* Expand/Collapse button */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="flex justify-center mt-4">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-4xl font-medium transition-colors text-neutral-100 hover:text-neutral-300"
+            className="text-2xl font-medium underline transition-colors text-neutral-100 hover:text-neutral-300 underline-offset-4"
           >
-            {isExpanded ? "Read less..." : "Read more..."}
+            {isExpanded ? "Read less" : "Read more"}
           </button>
-        </div>
-        <div className="!mt-20 flex items-center justify-center w-full">
+        </motion.div>
+
+        {/* Resume Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.8, ease: "easeOut" }}
+          className="!mt-16 flex items-center justify-center w-full"
+        >
           <ButtonTwo
-            icon={<BiDownload size={20} />}
+            icon={<BiDownload size={22} />}
             title="Download PDF resume"
             aria="Download resume"
+            className="px-6 py-3 text-white transition-all shadow-lg bg-gradient-to-r from-indigo-500 to-purple-600 hover:shadow-xl hover:scale-105 rounded-xl"
             onClick={() => {
               const link = document.createElement("a");
               link.href = "/JoshuaOnyekaResume.pdf";
@@ -63,10 +83,17 @@ export default function AboutMe() {
           >
             Resume
           </ButtonTwo>
-        </div>
+        </motion.div>
       </div>
 
-      <div data-aos="fade-left" data-aos-delay="200" className="flex justify-center m-auto mt-16 w-fit md:mt-0">
+      {/* Right Section - Profile Card */}
+      <motion.div
+        initial={{ opacity: 0, x: 60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+        whileHover={{ scale: 1.02 }}
+        className="flex justify-center m-auto mt-16 w-fit md:mt-0"
+      >
         <ProfileCard
           name="Joshua Onyeka"
           title="Software Developer"
@@ -78,7 +105,7 @@ export default function AboutMe() {
           enableTilt={true}
           onContactClick={() => window.open("https://calendly.com/jo_shua/", "_blank")}
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
