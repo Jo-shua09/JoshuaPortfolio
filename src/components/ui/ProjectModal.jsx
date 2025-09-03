@@ -23,8 +23,8 @@ export default function ProjectModal({ project, onClose }) {
           >
             {/* Images */}
             <div className="flex items-center justify-center w-full gap-6 md:gap-12">
-              <img src={project.imageDesktop} alt="project desktop" className="w-[40rem] md:w-[45rem] h-full rounded-lg" />
-              <img src={project.imageMobile} alt="project mobile" className="w-[7rem] md:w-[10rem] h-full rounded-lg" />
+              <img src={project.imageDesktop} alt="project desktop" className="w-[30rem] md:w-[45rem] h-full rounded-lg" />
+              <img src={project.imageMobile} alt="project mobile" className="w-[6rem] md:w-[10rem] h-full rounded-lg" />
             </div>
 
             {/* Details */}
