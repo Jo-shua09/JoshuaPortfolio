@@ -63,7 +63,21 @@ export default function Navigation() {
                   </a>
                 </>
               )}
-              <ButtonTwo children="resume" icon={<BiDownload size={20} />} title="Download PDF resume" aria="Download resume" />
+              <ButtonTwo
+                icon={<BiDownload size={20} />}
+                title="Download PDF resume"
+                aria="Download resume"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/JoshuaOnyekaResume.pdf";
+                  link.download = "JoshuaOnyekaResume.pdf";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
+                Resume
+              </ButtonTwo>
             </div>
           </nav>
         </div>

@@ -1,3 +1,4 @@
+// imports for project screenshots
 import estantienD from "../images/estantien-desktop.png";
 import estantienM from "../images/estantien-mobile.png";
 import kicksD from "../images/kicks-desktop.png";
@@ -20,18 +21,17 @@ import shopD from "../images/shop-desktop.png";
 import shopM from "../images/shop-mobile.png";
 import odinD from "../images/odinproject-desktop.png";
 import odinM from "../images/odinproject-mobile.png";
-import react from "../images/react-logo.svg";
-import js from "../images/javascript-logo.png";
-import html from "../images/html-logo.png";
-import css from "../images/css-logo.png";
-import tailwind from "../images/tailwind-logo.svg";
+
+// fallback logos (where no icon exists)
 import mockaroo from "../images/mockaroo-logo.png";
-import mui from "../images/material-ui.svg";
 import swiper from "../images/swiper-logo.svg";
 import aos from "../images/aos-logo.png";
-import redux from "../images/redux-logo.svg";
 import rechart from "../images/rechart-logo.svg";
 import spotify from "../images/spotify-logo.svg";
+
+// icons (react-icons)
+import { FaReact, FaJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { SiTailwindcss, SiRedux, SiMui } from "react-icons/si";
 
 export const projects = [
   {
@@ -46,7 +46,7 @@ export const projects = [
     ],
     imageDesktop: estantienD,
     imageMobile: estantienM,
-    stacks: [react, tailwind, mui, swiper, mockaroo, aos],
+    stacks: [FaReact, SiTailwindcss, SiMui, swiper, mockaroo, aos],
     live: "https://estantien.vercel.app",
     github: "https://github.com/Jo-shua09/real-estate",
   },
@@ -62,7 +62,7 @@ export const projects = [
     ],
     imageDesktop: kicksD,
     imageMobile: kicksM,
-    stacks: [react, tailwind, mui, swiper, aos, redux],
+    stacks: [FaReact, SiTailwindcss, SiMui, swiper, aos, SiRedux],
     live: "https://kickss.vercel.app",
     github: "https://github.com/Jo-shua09/kicks-e-commerce",
   },
@@ -78,7 +78,7 @@ export const projects = [
     ],
     imageDesktop: rentchainD,
     imageMobile: rentchainM,
-    stacks: [react, tailwind],
+    stacks: [FaReact, SiTailwindcss],
     live: "https://rent-chain.vercel.app",
     github: "https://github.com/Emmyhack/Morph-RentChain",
   },
@@ -94,7 +94,7 @@ export const projects = [
     ],
     imageDesktop: dashboardD,
     imageMobile: dashboardM,
-    stacks: [react, tailwind, rechart, mui],
+    stacks: [FaReact, SiTailwindcss, rechart, SiMui],
     live: "",
     github: "https://github.com/Jo-shua09/admin-dashboard",
   },
@@ -109,7 +109,7 @@ export const projects = [
     ],
     imageDesktop: lyriclyD,
     imageMobile: lyriclyM,
-    stacks: [react, tailwind, mui, aos, spotify],
+    stacks: [FaReact, SiTailwindcss, SiMui, aos, spotify],
     live: "",
     github: "https://github.com/Jo-shua09/Lyricly-Music-",
   },
@@ -125,7 +125,7 @@ export const projects = [
     ],
     imageDesktop: edmossD,
     imageMobile: edmossM,
-    stacks: [react, tailwind],
+    stacks: [FaReact, SiTailwindcss],
     live: "https://edmoss.vercel.app",
     github: "https://github.com/Jo-shua09/Edmoss_landingPage",
   },
@@ -141,7 +141,7 @@ export const projects = [
     ],
     imageDesktop: basicD,
     imageMobile: basicM,
-    stacks: [html, css, js, swiper],
+    stacks: [FaHtml5, FaCss3Alt, FaJs, swiper],
     live: "https://baasic-dept.vercel.app",
     github: "https://github.com/Jo-shua09/BASIC-DEPT_web",
   },
@@ -157,7 +157,7 @@ export const projects = [
     ],
     imageDesktop: odinD,
     imageMobile: odinM,
-    stacks: [html, css, js],
+    stacks: [FaHtml5, FaCss3Alt, FaJs],
     live: "https://t-doinproject.vercel.app",
     github: "https://github.com/Jo-shua09/odinproject_clone",
   },
@@ -173,7 +173,7 @@ export const projects = [
     ],
     imageDesktop: eccaraD,
     imageMobile: eccaraM,
-    stacks: [html, css, js, swiper],
+    stacks: [FaHtml5, FaCss3Alt, FaJs, swiper],
     live: "https://t-ecarra.vercel.app",
     github: "https://github.com/Jo-shua09/Ecarra_stores.commerce",
   },
@@ -189,7 +189,7 @@ export const projects = [
     ],
     imageDesktop: shopD,
     imageMobile: shopM,
-    stacks: [html, css, js],
+    stacks: [FaHtml5, FaCss3Alt, FaJs],
     live: "https://tuma-shop.vercel.app",
     github: "https://github.com/Jo-shua09/e-commerce_web",
   },
@@ -205,7 +205,7 @@ export const projects = [
     ],
     imageDesktop: restD,
     imageMobile: restM,
-    stacks: [html, css, js, swiper],
+    stacks: [FaHtml5, FaCss3Alt, FaJs, swiper],
     live: "https://t-restuarant.vercel.app",
     github: "https://github.com/Jo-shua09/grilli-restaurant",
   },

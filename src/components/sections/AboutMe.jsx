@@ -48,7 +48,21 @@ export default function AboutMe() {
           </button>
         </div>
         <div className="!mt-20 flex items-center justify-center w-full">
-          <ButtonTwo children="resume" icon={<BiDownload size={20} />} title="Download PDF resume" aria="Download resume" />
+          <ButtonTwo
+            icon={<BiDownload size={20} />}
+            title="Download PDF resume"
+            aria="Download resume"
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/JoshuaOnyekaResume.pdf";
+              link.download = "JoshuaOnyekaResume.pdf";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
+          >
+            Resume
+          </ButtonTwo>
         </div>
       </div>
 
