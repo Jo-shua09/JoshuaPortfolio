@@ -8,9 +8,39 @@ import Index from "../pages/Index";
 import Portfolio from "../pages/Portfolio";
 import { motion } from "framer-motion";
 import Loader from "../components/animations/Loader";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function AppLayout() {
   const [isLoading, setIsLoading] = useState(true);
+
+  useGSAP(() => {
+    let tl = gsap.timeline();
+    tl.to(".box", {
+      scale: 0,
+      y: 60,
+      rotate: 400,
+      yoyo: true,
+      repeat: 1,
+      ease: "power1.inOut",
+      duration: 1,
+      delay: 0.5,
+      stagger: {
+        amount: 1.5,
+        from: "start",
+        grid: [3, 3],
+      },
+    });
+    tl.to(".container", {
+      rotate: "-450deg",
+      scale: 0,
+      dfuration: 1,
+    });
+    tl.to(".wrapper", {
+      opacity: 0,
+      display: "none",
+    });
+  });
 
   return (
     <div className="relative m-auto w-full max-w-[185rem] overflow-hidden">

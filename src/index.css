@@ -52,6 +52,10 @@ body {
   padding: 0 4rem;
 }
 
+.box {
+  box-shadow: 0, 0, 15px black;
+}
+
 @supports (-webkit-touch-callout: none) {
   /* Safari-specific styles */
   header {

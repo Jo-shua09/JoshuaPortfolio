@@ -42,7 +42,7 @@ export default function ProjectModal({ project, onClose }) {
                 <div className="flex justify-center max-w-4xl m-auto my-20">
                   <LogoLoop
                     logos={project.stacks
-                      .map((stack, i) => {
+                      .map((stack) => {
                         // If it's an image string
                         if (typeof stack === "string") {
                           return {
