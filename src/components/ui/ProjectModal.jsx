@@ -32,14 +32,14 @@ export default function ProjectModal({ project, onClose }) {
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="mt-8 space-y-6 text-center"
+              className="mt-8 space-y-20 text-center md:space-y-6"
             >
               <h2 className="text-5xl font-bold text-white normal-case md:text-4xl font-monospace">{project.title}</h2>
               <p className="text-3xl font-medium normal-case md:text-[1.7rem] text-neutral-300">{project.overview}</p>
 
               {/* Animated Stack Logos */}
               {project.stacks && project.stacks.length > 0 && (
-                <div className="flex justify-center max-w-4xl m-auto my-10">
+                <div className="flex justify-center max-w-4xl m-auto my-20">
                   <LogoLoop
                     logos={project.stacks
                       .map((stack, i) => {
