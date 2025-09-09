@@ -69,8 +69,8 @@ export default function Navigation() {
                 aria="Download resume"
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href = "/JoshuaOnyekaResume.pdf";
-                  link.download = "JoshuaOnyekaResume.pdf";
+                  link.href = "/JoshuaOnyeka.pdf";
+                  link.download = "JoshuaOnyeka.pdf";
                   document.body.appendChild(link);
                   link.click();
                   document.body.removeChild(link);

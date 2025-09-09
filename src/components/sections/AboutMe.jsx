@@ -74,8 +74,8 @@ export default function AboutMe() {
             className="px-6 py-3 text-white transition-all shadow-lg bg-gradient-to-r from-indigo-500 to-purple-600 hover:shadow-xl hover:scale-105 rounded-xl"
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/JoshuaOnyekaResume.pdf";
-              link.download = "JoshuaOnyekaResume.pdf";
+              link.href = "/JoshuaOnyeka.pdf";
+              link.download = "JoshuaOnyeka.pdf";
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);
