@@ -14,16 +14,21 @@ export default function AboutMe() {
       {/* Left Section */}
       <div className="flex-1 space-y-4 text-left">
         {/* Header */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="inline-flex justify-center py-3 border rounded-full w-fit border-neutral-800 backdrop-blur-sm bg-neutral-900/30"
+        > */}
+        <div
+          data-aos="fade-down"
+          className="md:mr-0 mr-5 py-3 flex md:m-0 m-auto border rounded-full w-fit !-z-10 border-neutral-800 backdrop-blur-sm bg-neutral-900/30"
         >
           <FuzzyText baseIntensity={0.1} hoverIntensity={1} enableHover={true} fontSize="clamp(2rem, 10vw, 3.5rem)">
-            About Me
+            About me
           </FuzzyText>
-        </motion.div>
+        </div>
+        {/* </motion.div> */}
 
         {/* Description */}
         <motion.article

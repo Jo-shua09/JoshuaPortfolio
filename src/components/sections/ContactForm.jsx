@@ -244,7 +244,7 @@ export default function ContactForm() {
                 {errors.message && <p className="mt-1 text-xl text-red-500">{errors.message}</p>}
               </div>
 
-              <div data-aos="fade-up" data-aos-delay="900" className="w-full">
+              <div className="w-full">
                 <ButtonTwo
                   type="submit"
                   disabled={isSubmitting}

@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../ui/Button";
 import LogoLoop from "./LogoLoop";
+import { X } from "lucide-react";
 
 export default function ProjectModal({ project, onClose }) {
   return (
@@ -18,9 +19,12 @@ export default function ProjectModal({ project, onClose }) {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="bg-neutral-900 rounded-2xl px-8 py-16 md:p-8 md:space-y-8 space-y-20 shadow-2xl max-w-7xl w-[90%]"
+            className="bg-neutral-900 relative rounded-2xl px-8 py-16 md:p-8 md:space-y-8 space-y-20 shadow-2xl max-w-7xl w-[90%]"
             onClick={(e) => e.stopPropagation()}
           >
+            <div onClick={onClose} className="absolute top-5 right-5 cursor-pointer w-fit h-fit">
+              <X size={25} className="text-white cursor-pointer" />
+            </div>
             {/* Images */}
             <div className="flex items-center justify-center w-full gap-6 md:gap-12">
               <img src={project.imageDesktop} alt="project desktop" className="w-[30rem] md:w-[45rem] h-full rounded-lg" />

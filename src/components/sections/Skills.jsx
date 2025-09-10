@@ -24,7 +24,7 @@ export default function Skills() {
   return (
     <div className="w-full section">
       <div className="space-y-4 text-left">
-        <div 
+        <div
           data-aos="fade-down"
           className="md:mr-0 mr-5 py-3 flex md:m-0 m-auto border rounded-full w-fit !-z-10 border-neutral-800 backdrop-blur-sm bg-neutral-900/30"
         >
@@ -34,11 +34,7 @@ export default function Skills() {
         </div>
 
         <div className="w-full grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-x-16 gap-y-20 !mt-16">
-          <div 
-            data-aos="fade-right"
-            data-aos-delay="200"
-            className="rounded-xl p-10 w-full shadow-2xl m-auto bg-neutral-900"
-          >
+          <div data-aos="fade-right" data-aos-delay="200" className="rounded-xl p-10 w-full shadow-2xl m-auto bg-neutral-900">
             <h2 className="text-5xl font-semibold mb-20 text-white font-monospace">tech stack</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-14">
               {[
@@ -52,12 +48,7 @@ export default function Skills() {
                 { src: redux, name: "redux" },
                 { src: firebase, name: "firebase" },
               ].map((tech, index) => (
-                <div 
-                  key={tech.name}
-                  data-aos="fade-up"
-                  data-aos-delay={100 * (index + 1)}
-                  className="space-x-5 flex items-center"
-                >
+                <div key={tech.name} data-aos="fade-up" data-aos-delay={100 * (index + 1)} className="space-x-5 flex items-center">
                   <img src={tech.src} alt={`${tech.name} logo`} className="w-20 h-20 object-contain" />
                   <h3 className="text-[1.7rem] font-semibold text-neutral-300">{tech.name}</h3>
                 </div>
@@ -65,11 +56,7 @@ export default function Skills() {
             </div>
           </div>
 
-          <div 
-            data-aos="fade-left"
-            data-aos-delay="200"
-            className="rounded-xl p-10 max-w-7xl shadow-2xl bg-neutral-900"
-          >
+          <div data-aos="fade-left" data-aos-delay="200" className="rounded-xl p-10 max-w-7xl shadow-2xl bg-neutral-900">
             <h2 className="text-5xl font-semibold mb-20 text-white font-monospace">other tools and technologies</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-14">
               {[
@@ -84,17 +71,8 @@ export default function Skills() {
                 { src: rechart, name: "rechart" },
                 { src: vscode, name: "VS code" },
               ].map((tool, index) => (
-                <div 
-                  key={tool.name || index}
-                  data-aos="fade-up"
-                  data-aos-delay={100 * (index + 1)}
-                  className="space-x-5 flex items-center"
-                >
-                  <img 
-                    src={tool.src} 
-                    alt={`${tool.name} logo`} 
-                    className={tool.className || "w-20 h-20 object-contain"} 
-                  />
+                <div key={tool.name || index} data-aos="fade-up" data-aos-delay={100 * (index + 1)} className="space-x-5 flex items-center">
+                  <img src={tool.src} alt={`${tool.name} logo`} className={tool.className || "w-20 h-20 object-contain"} />
                   {tool.name && <h3 className="text-[1.7rem] font-semibold text-neutral-300">{tool.name}</h3>}
                 </div>
               ))}
